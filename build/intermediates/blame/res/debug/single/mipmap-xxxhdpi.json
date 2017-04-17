@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher_round.png",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    }
+]

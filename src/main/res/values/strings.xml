@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="main_title">Note</string>
+    <string name="dialog_dir_title">新添分类</string>
+    <string name="dirdialog_ensure">确认</string>
+    <string name="dirdialog_cancel">取消</string>
+    <string name="dirdialog_hintTitle">新添类别名称</string>
+    <string name="dirdialog_hintText">文件夹介绍</string>
+    <string name="load_more">别扯了，没有了......</string>
+    <string name="action_save">保存</string>
+    <string name="toolbar_title_notes">文章列表</string>
+    <string name="toolba_title_note">编辑内容</string>
+    <string name="menu_about">关于</string>
+    <string name="menu_export">一键导出</string>
+</resources>

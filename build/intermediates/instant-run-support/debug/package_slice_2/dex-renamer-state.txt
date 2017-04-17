@@ -1,0 +1,4 @@
+#Fri Apr 14 18:05:28 CST 2017
+base.0=E\:\\Users\\User\\studio1\\ming\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_2
+renamed.0=classes.dex
+file.0=E\:\\Users\\User\\studio1\\ming\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_2\\classes.dex

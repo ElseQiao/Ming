@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\menu\\context_note.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\menu\\context_note.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\menu\\edit_note.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\menu\\edit_note.xml"
+    }
+]
