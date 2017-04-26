@@ -36,28 +36,36 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\0cbefcb05d6ffadedaee74e618ce2de450a90545\\output\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\0cbefcb05d6ffadedaee74e618ce2de450a90545\\output\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\0cbefcb05d6ffadedaee74e618ce2de450a90545\\output\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\User\\.android\\build-cache\\0cbefcb05d6ffadedaee74e618ce2de450a90545\\output\\res\\layout\\abc_action_mode_bar.xml"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_dirs.xml",
         "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\dialog_dirs.xml"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "C:\\Users\\User\\.android\\build-cache\\0cbefcb05d6ffadedaee74e618ce2de450a90545\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\nnf_dialog_folder_name.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\nnf_dialog_folder_name.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\dirslist.xml",
         "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\dirslist.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\0cbefcb05d6ffadedaee74e618ce2de450a90545\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_note_list.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\dialog_note_list.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
@@ -128,6 +136,10 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\0cbefcb05d6ffadedaee74e618ce2de450a90545\\output\\res\\layout\\abc_search_view.xml"
     },
     {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\nnf_fragment_filepicker.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\nnf_fragment_filepicker.xml"
+    },
+    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\98116580233b0b707afacefc00429ea56338a2a9\\output\\res\\layout\\design_bottom_navigation_item.xml"
     },
@@ -136,12 +148,16 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\98116580233b0b707afacefc00429ea56338a2a9\\output\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\activity_note.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\activity_note.xml"
+    },
+    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\0cbefcb05d6ffadedaee74e618ce2de450a90545\\output\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\activity_note.xml",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\activity_note.xml"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\nnf_filepicker_listitem_checkable.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\nnf_filepicker_listitem_checkable.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
@@ -150,6 +166,10 @@
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\0cbefcb05d6ffadedaee74e618ce2de450a90545\\output\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\nnf_activity_filepicker.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\nnf_activity_filepicker.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
@@ -166,6 +186,10 @@
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\0cbefcb05d6ffadedaee74e618ce2de450a90545\\output\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\crop__layout_done_cancel.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\aa7a597ae9cbebab37205c1c6e811223946b58fa\\output\\res\\layout\\crop__layout_done_cancel.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
@@ -208,6 +232,10 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\0cbefcb05d6ffadedaee74e618ce2de450a90545\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\nnf_filepicker_listitem_dir.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\nnf_filepicker_listitem_dir.xml"
+    },
+    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\0cbefcb05d6ffadedaee74e618ce2de450a90545\\output\\res\\layout\\abc_screen_content_include.xml"
     },
@@ -222,6 +250,10 @@
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\noteslist.xml",
         "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\noteslist.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\crop__activity_crop.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\aa7a597ae9cbebab37205c1c6e811223946b58fa\\output\\res\\layout\\crop__activity_crop.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",

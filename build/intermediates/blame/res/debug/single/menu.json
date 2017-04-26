@@ -10,5 +10,9 @@
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\menu\\edit_note.xml",
         "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\menu\\edit_note.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\menu\\picker_actions.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\menu\\picker_actions.xml"
     }
 ]

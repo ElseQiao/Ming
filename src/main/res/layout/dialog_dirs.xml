@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/normal_height"
         android:layout_margin="@dimen/margin_all"
+        android:maxLength="6"
         android:gravity="start"
         android:hint="@string/dirdialog_hintTitle"
         android:textSize="@dimen/bartext_size" />

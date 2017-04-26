@@ -1,4 +1,4 @@
-#Mon Apr 10 15:27:23 CST 2017
+#Wed Apr 26 10:32:28 CST 2017
 base.0=E\:\\Users\\User\\studio1\\ming\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1
 renamed.0=classes.dex
 file.0=E\:\\Users\\User\\studio1\\ming\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_1\\classes.dex

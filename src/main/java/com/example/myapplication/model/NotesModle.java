@@ -19,6 +19,7 @@ public class NotesModle extends DataSupport {
 
     private long create_data;
     private long change_data;
+    @Column(defaultValue = "-1")
     private String img_url;
     private long id;
     private long parent_id;

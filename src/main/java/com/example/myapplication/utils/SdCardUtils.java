@@ -21,7 +21,7 @@ public class SdCardUtils {
         /* cannot be instantiated */
         throw new UnsupportedOperationException("cannot be instantiated");
     }
-
+    public static String textDirName="yishu"+File.separator;
     /**
      * 判断SDCard是否可用
      */

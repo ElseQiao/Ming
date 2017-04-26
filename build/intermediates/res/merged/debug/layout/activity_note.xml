@@ -15,38 +15,64 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways"
-            android:background="?attr/colorPrimary"/>
+            android:background="?attr/colorPrimary">
+            <!--<EditText-->
+                <!--android:layout_width="180dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:hint="@string/dirdialog_hintTitle"-->
+                <!--/>-->
+        </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
-
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_marginLeft="@dimen/margin_all"
+    android:layout_marginRight="@dimen/margin_all"
+    android:layout_marginBottom="@dimen/margin_all"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:padding="@dimen/margin_all"
+        android:background="@color/note_color2"
         android:orientation="vertical">
         <EditText
             android:id="@+id/title_et"
             android:layout_width="match_parent"
             android:layout_height="@dimen/normal_height"
-            android:ems="10"
-            android:background="@color/note_color1"
-            android:text="jaldfl阿萨德加咖喱"
+            android:maxLength="6"
+            android:typeface="serif"
+            android:hint="@string/dirdialog_hintTitle"
             />
 
+
+        <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1">-->
+           <!---->
+
+
+        <!--</ScrollView>-->
         <EditText
             android:id="@+id/content_et"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
             android:gravity="start"
-            android:background="@color/note_color11"
-            android:inputType="textMultiLine"
-            android:text="jaldfl阿萨德加咖喱" />
-
+            android:typeface="serif"
+            android:textStyle="italic"
+            android:text="" />
     </LinearLayout>
-
-
+</android.support.v7.widget.CardView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/edit_fbt"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@color/color1"
+        app:backgroundTint="@color/colorPrimary" />
 </android.support.design.widget.CoordinatorLayout>
