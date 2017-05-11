@@ -9,6 +9,10 @@
         android:id="@+id/action_export"
         NotepadApp:showAsAction="never"
         android:title="@string/menu_export" />
+    <item
+        android:id="@+id/action_lock"
+        NotepadApp:showAsAction="never"
+        android:title="@string/menu_about" />
 
     <item
         android:id="@+id/action_about"

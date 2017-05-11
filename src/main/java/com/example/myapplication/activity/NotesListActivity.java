@@ -33,11 +33,11 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 
 public class NotesListActivity extends AppCompatActivity {
     private static final String TAG = "NotesListActivity";
+    private final int noteList_requestCode=1000;
     private Toolbar toolbar;
     private FloatingActionButton fb;
     private RecyclerView recyclerView;
@@ -64,11 +64,11 @@ public class NotesListActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.text_recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        // footViewUpdata();
+        footViewUpdata();
         recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                goEditActivity(notes.get(position).getId(), position, false);
+                goEditActivity(notes.get(position).getId(), position, true);
             }
 
             @Override
@@ -102,34 +102,24 @@ public class NotesListActivity extends AppCompatActivity {
         });
     }
 
-   
+    private int limit=8;
+    private int offset=0;
 
     private void initData() {
-        executorSingle = Executors.newSingleThreadExecutor();
         refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 refresh.setRefreshing(false);
             }
         });
-        executorSingle.execute(new Runnable() {
-            @Override
-            public void run() {
-                notes = DataSupport.where("parent_id like ?", "" + parent_id).find(NotesModle.class);
-                if (notes == null) {
+        notes = DataSupport.where("parent_id like ?", "" + parent_id).order("id desc")
+                .limit(limit).offset(offset).find(NotesModle.class);
+        if (notes == null) {
                     notes = new ArrayList<>();
-                }
-                adapter = new TextAdapter(NotesListActivity.this, notes);
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        recyclerView.setAdapter(adapter);
-                    }
-                });
-            }
-        });
-
-
+        }
+        offset=offset+notes.size();
+        adapter = new TextAdapter(NotesListActivity.this, notes);
+        recyclerView.setAdapter(adapter);
     }
 
 
@@ -144,7 +134,7 @@ public class NotesListActivity extends AppCompatActivity {
             NotesModle findNote = DataSupport.findLast(NotesModle.class);
             notes.add(findNote);
             adapter.notifyItemInserted(notes.size() - 1);
-            goEditActivity(findNote.getId(), notes.size() - 1, true);
+            goEditActivity(findNote.getId(), notes.size() - 1, false);
         } else {
             TipShow("creat fail");
         }
@@ -153,12 +143,16 @@ public class NotesListActivity extends AppCompatActivity {
 
     private int editPosition = -1;
 
-    private void goEditActivity(long note_id, int position, boolean canEdit) {
+    private void goEditActivity(long note_id, int position, boolean onlyRead) {
         editPosition = position;
-        Intent i = new Intent(NotesListActivity.this, NoteActivity.class);
+        Intent i=null;
+        if(onlyRead){
+            i = new Intent(NotesListActivity.this, NoteActivity.class);
+        }else{
+            i = new Intent(NotesListActivity.this, NoteShowActivity.class);
+        }
         i.putExtra("id", note_id);
-        i.putExtra("edit", canEdit);
-        startActivityForResult(i, 1000);
+        startActivityForResult(i, noteList_requestCode);
     }
 
     @Override
@@ -166,7 +160,7 @@ public class NotesListActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         switch (requestCode){
-            case 1000:
+            case noteList_requestCode:
                 if ( resultCode == RESULT_OK) {
                     //adapter.notifyItemChanged();
                     long editNoteId = data.getLongExtra("resultCode_id", -1);
@@ -180,25 +174,17 @@ public class NotesListActivity extends AppCompatActivity {
                 }
                 break;
             case Crop.REQUEST_PICK:
-                beginCrop(data.getData());
+                if ( resultCode == RESULT_OK) {
+                    beginCrop(data.getData());
+                }
                 break;
             case Crop.REQUEST_CROP:
-                handleCrop(resultCode, data);
+                if ( resultCode == RESULT_OK) {
+                    handleCrop(resultCode, data);
+                }
             break;
             default:
                 break;
-        }
-
-        if (requestCode == 1000 && resultCode == RESULT_OK) {
-            //adapter.notifyItemChanged();
-            long editNoteId = data.getLongExtra("resultCode_id", -1);
-            NotesModle editModle = DataSupport.find(NotesModle.class, editNoteId);
-            if (editModle == null) {
-                return;
-            }
-            notes.remove(editPosition);
-            notes.add(editPosition, editModle);
-            adapter.notifyItemChanged(editPosition);
         }
     }
 
@@ -210,6 +196,15 @@ public class NotesListActivity extends AppCompatActivity {
     }
 
     private void loadMore() {
+        List<NotesModle> moreNotes= DataSupport.where("parent_id like ?", "" + parent_id).order("id desc")
+                .limit(limit).offset(offset).find(NotesModle.class);
+        if (moreNotes == null||moreNotes.size()==0) {
+            return;
+        }
+        int fromStart=notes.size()+1;
+        offset=offset+moreNotes.size();//计算下一次偏移量
+        notes.addAll(moreNotes);
+        adapter.notifyItemRangeInserted(fromStart,moreNotes.size());
     }
 
 
@@ -224,14 +219,15 @@ public class NotesListActivity extends AppCompatActivity {
                 //停止滑动时
                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
                     // 获取最后一个完全显示的item position
-                    // int lastVisibleItem = manager.findLastCompletelyVisibleItemPositions(new int[2]);
                     int lastVisibleItem = manager.findLastVisibleItemPosition();
                     int totalItemCount = manager.getItemCount();
                     // 判断是否滚动到底部并且是向下滑动
                     if (lastVisibleItem == (totalItemCount - 1) && isSlidingToLast) {
                         loadMore();
                     }
+
                 }
+
                 super.onScrollStateChanged(recyclerView, newState);
             }
 
@@ -240,11 +236,8 @@ public class NotesListActivity extends AppCompatActivity {
                 super.onScrolled(recyclerView, dx, dy);
                 isSlidingToLast = dy > 0;
                 // 隐藏或者显示fab
-                if (dy > 0) {
-                    fb.hide();
-                } else {
-                    fb.show();
-                }
+                // fb.show();//停止滚动显示
+                //fb.hide();//滚动时隐藏
             }
         });
     }
@@ -267,6 +260,10 @@ public class NotesListActivity extends AppCompatActivity {
         tv_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                NotesModle nm=notes.get(position);
+                DataSupport.delete(NotesModle.class, nm.getId());
+                notes.remove(position);
+                adapter.notifyItemRangeRemoved(position,1);
                 dialog.dismiss();
             }
         });
@@ -278,6 +275,8 @@ public class NotesListActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void pickImage(int position) {
         //Crop.of(inputUri, outputUri).asSquare().start(activity)修改一个图片
@@ -291,14 +290,17 @@ public class NotesListActivity extends AppCompatActivity {
         }
         Uri destination = Uri.fromFile(new File(file,"img"+System.currentTimeMillis()));
         Crop.of(source, destination).asSquare().start(this);
+        Crop.of(source, destination).withAspect(9,16).withMaxSize(720,1280).start(this);
 
     }
+   //
     private void handleCrop(int resultCode, Intent result) {
         if (resultCode == RESULT_OK) {
           //   resultView.setImageURI(Crop.getOutput(result));
             NotesModle modle=notes.get(positionForImage);
             modle.setImg_url(Crop.getOutput(result).toString());
             modle.update(modle.getId());
+            adapter.notifyItemChanged(positionForImage,modle);
         } else if (resultCode == Crop.RESULT_ERROR) {
             TipShow(Crop.getError(result).getMessage());
         }

@@ -3,7 +3,6 @@ package com.example.myapplication.adapter;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.support.v7.widget.SwitchCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,8 +21,8 @@ import java.util.List;
 public class DirsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private List<DirsModle> dirs=new ArrayList<>();
-    private int[] cardColors={R.color.color1,R.color.color2,R.color.color3,R.color.color4,R.color.color5,
-            R.color.color6, R.color.color7,R.color.color8,R.color.color9,R.color.color10};
+    private int[] cardColors={R.color.color2,R.color.color2,R.color.color4,R.color.color4,R.color.color5,
+            R.color.color1,R.color.color2,R.color.color2,R.color.color4,R.color.color5};
     private final int  NORMAL_TYPE=0;
     private final int FOOT_TYPE=1;
     private LayoutInflater layoutInflater;

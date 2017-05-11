@@ -1,0 +1,67 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/a123"
+    tools:context="com.example.myapplication.activity.LockActivity">
+
+    <com.andrognito.patternlockview.PatternLockView
+        android:id="@+id/pattern_lock_view"
+        android:layout_gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:dotCount="3"
+        app:dotNormalSize="12dp"
+        app:dotSelectedSize="24dp"
+    app:pathWidth="4dp"
+    app:aspectRatioEnabled="true"
+    app:aspectRatio="square"
+    app:normalStateColor="@color/white"
+    app:correctStateColor="@color/colorPrimary"
+    app:wrongStateColor="@color/pomegranate"
+    app:dotAnimationDuration="200"
+    app:pathEndAnimationDuration="100"
+        tools:layout_editor_absoluteY="143dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lock_texttip"
+        android:layout_width="344dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/pattern_lock_view" />
+
+    <Button
+        android:id="@+id/lock_button_clean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清除手势"
+        android:textColor="@color/color_bg"
+        android:background="@drawable/basecolor_bt"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="501dp" />
+
+
+</android.support.constraint.ConstraintLayout>
+    <!--app:dotCount="3"                                    // Change the no.of dots in a row (or column)-->
+    <!--app:dotNormalSize="12dp"                                // Change the size of the dots in normal state-->
+    <!--app:dotSelectedSize="24dp"                              // Change the size of the dots in selected state-->
+    <!--app:pathWidth="4dp"                                     // Change the width of the path-->
+    <!--app:aspectRatioEnabled="true"                           // Set if the view should respect custom aspect ratio-->
+    <!--app:aspectRatio="square"                                // Set between "square", "width_bias", "height_bias"-->
+    <!--app:normalStateColor="@color/white"                     // Set the color of the pattern view in normal state-->
+    <!--app:correctStateColor="@color/primary"                  // Set the color of the pattern view in correct state-->
+    <!--app:wrongStateColor="@color/pomegranate"                // Set the color of the pattern view in error state-->
+    <!--app:dotAnimationDuration="200"                          // Change the duration of the animating dots-->
+    <!--app:pathEndAnimationDuration="100"                      // Change the duration of the path end animaiton-->
+

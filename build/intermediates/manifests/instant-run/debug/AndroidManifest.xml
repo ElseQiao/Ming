@@ -5,11 +5,15 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="15"
+        android:minSdkVersion="16"
         android:targetSdkVersion="25" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1" />
 
     <application
         android:name="com.example.myapplication.MyApplication"
@@ -21,7 +25,21 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.myapplication.MainActivity"
-            android:label="@string/main_title" >
+            android:label="@string/main_title"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.example.myapplication.activity.NotesListActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.example.myapplication.activity.NoteActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.example.myapplication.activity.SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_splash"
+            android:theme="@style/FullscreenTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,15 +47,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.myapplication.activity.NotesListActivity"
-            android:launchMode="singleTask" />
-        <activity
-            android:name="com.example.myapplication.activity.NoteActivity"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustResize" >
+            android:name="com.example.myapplication.activity.LockActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_lock"
+            android:theme="@style/FullscreenTheme" >
         </activity>
         <!-- image picker -->
-        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity
+            android:name="com.soundcloud.android.crop.CropImageActivity"
+            android:windowSoftInputMode="adjustResize" />
         <!--
          Due to recent changes in Android 7.0 Nougat, bare File URIs can no longer
          be returned in a safe way. This change requires you to add an entry to your
@@ -63,6 +81,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.myapplication.activity.NoteShowActivity" />
 
         <service
             android:name="com.android.tools.fd.runtime.InstantRunService"

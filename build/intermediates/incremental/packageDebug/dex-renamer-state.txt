@@ -1,4 +1,4 @@
-#Wed Apr 26 17:00:53 CST 2017
+#Thu May 11 11:17:33 CST 2017
 base.0=E\:\\Users\\User\\studio1\\ming\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_cd62cd729c3ca515a0f5c5bfd84807fc57028781
 renamed.1=classes.dex
 renamed.0=classes2.dex

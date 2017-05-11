@@ -7,22 +7,32 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.TextView;
 
+import com.example.myapplication.activity.LockActivity;
 import com.example.myapplication.activity.NotesListActivity;
 import com.example.myapplication.adapter.DirsAdapter;
 import com.example.myapplication.filepicker.FilePickerActivity;
 import com.example.myapplication.filepicker.Utils;
 import com.example.myapplication.fragment.DirsDialog;
 import com.example.myapplication.model.DirsModle;
+import com.example.myapplication.model.NotesModle;
 import com.example.myapplication.model.RecyclerItemClickListener;
 import com.example.myapplication.utils.ExportUtil;
 import com.example.myapplication.utils.ImportUtil;
@@ -47,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     private SwipeRefreshLayout refresh;
     private List<DirsModle> dirs;
     private DirsAdapter adapter;
-    private int limit=8;
+    private int limit=12;
     private int offset=0;
    // private ExecutorService singleExecutor;
 
@@ -64,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-        StaggeredGridLayoutManager g = new StaggeredGridLayoutManager(2, OrientationHelper.VERTICAL);
+        StaggeredGridLayoutManager g = new StaggeredGridLayoutManager(3, OrientationHelper.VERTICAL);
 
         recyclerView.setLayoutManager(g);
         recyclerView.setLayoutManager(g);
@@ -81,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onItemLongClick(View view, int position) {
-
+                showCustomDialog(position);
             }
         }));
 
@@ -94,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("文件分类");
+        toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.color_bg));
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_main);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -120,6 +131,14 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.action_import:
                         onDirPicker();
+                        break;
+                    case R.id.action_lock:
+                        Intent lockIntent=new Intent(MainActivity.this, LockActivity.class);
+                        String intentType="lock_type";
+                        lockIntent.putExtra(intentType,0);
+                        startActivity(lockIntent);
+                     break;
+                    default:
                         break;
                 }
                 return false;
@@ -279,6 +298,59 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+    private int positionForImage=-1;
+    private void showCustomDialog(final int position) {
+        positionForImage=position;
+        LayoutInflater inflater = getLayoutInflater();
+        View v = inflater.inflate(R.layout.dialog_dirs_list, (ViewGroup) findViewById(R.id.dialog_notelist));
+        TextView tv_delete= (TextView) v.findViewById(R.id.dialog_dirlist_tv1);
+        TextView tv_edit= (TextView) v.findViewById(R.id.dialog_dirlist_tv2);
+
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(this);
+        builder.setView(v);
+        final AlertDialog dialog = builder.create();
+        dialog.show();
+        setDialogAttributes(dialog);
+
+        tv_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                long parentId = dirs.get(position).getId();
+                DataSupport.deleteAllAsync(NotesModle.class, "parent_id = ?", parentId + "");
+                DataSupport.delete(DirsModle.class, parentId);
+                dirs.remove(position);
+                adapter.notifyItemRemoved(position);
+                dialog.dismiss();
+            }
+        });
+        tv_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+    }
+
+    private void setDialogAttributes(AlertDialog dialog) {
+        //放在show()之后，不然有些属性是没有效果的，比如height和width
+        Window dialogWindow = dialog.getWindow();
+        WindowManager.LayoutParams p = dialogWindow.getAttributes(); // 获取对话框当前的参数值
+
+        DisplayMetrics dm = new DisplayMetrics();//获取当前屏幕的宽高用
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+        //设置高度和宽度
+        p.width = (int) (dm.widthPixels * 0.9); // 宽度设置为屏幕的0.6
+        p.height=dialogWindow.getAttributes().height;
+        //设置位置
+        // p.gravity = Gravity.BOTTOM;
+        //设置透明度
+        //p.alpha = 0.5f;
+        dialogWindow.setAttributes(p);
+
+    }
+
 
     @Override
     protected void onDestroy() {
