@@ -1,6 +1,8 @@
 package com.example.myapplication.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.Snackbar;
@@ -91,8 +93,34 @@ public class NoteShowActivity extends AppCompatActivity {
             }
         });
 
-
+        //设置透明状态栏
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+           // getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            toolbar.setPadding(0, getStatusBarHeight(this), 0, 0);    //给Toolbar设置paddingTop
+        }
     }
+
+    //通过反射获取状态栏高度，默认25dp
+    private static int getStatusBarHeight(Context context) {
+        int statusBarHeight = dip2px(context, 25);
+        try {
+            Class<?> clazz = Class.forName("com.android.internal.R$dimen");
+            Object object = clazz.newInstance();
+            int height = Integer.parseInt(clazz.getField("status_bar_height")
+                    .get(object).toString());
+            statusBarHeight = context.getResources().getDimensionPixelSize(height);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return statusBarHeight;
+    }
+
+    //根据手机的分辨率从 dp 的单位 转成为 px(像素)
+    public static int dip2px(Context context, float dpValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
+    }
+
 
     @Override
     protected void onPause() {

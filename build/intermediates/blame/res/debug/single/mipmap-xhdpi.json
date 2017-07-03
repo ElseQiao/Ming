@@ -1,10 +1,30 @@
 [
     {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\icon_import.png",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\icon_import.png"
+    },
+    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher_round.png",
         "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\m5.png",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\m5.png"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\edit.png",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\edit.png"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\menu.png",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\menu.png"
+    },
+    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
         "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\abg.png",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\abg.png"
     }
 ]

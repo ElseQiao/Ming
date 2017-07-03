@@ -22,7 +22,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/MyAppTheme" >
         <activity
             android:name="com.example.myapplication.MainActivity"
             android:label="@string/main_title"
@@ -36,10 +36,13 @@
             android:launchMode="singleTask" >
         </activity>
         <activity
+            android:name="com.example.myapplication.activity.NoteShowActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name="com.example.myapplication.activity.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_splash"
-            android:theme="@style/FullscreenTheme" >
+            android:label="@string/title_activity_splash" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,8 +52,7 @@
         <activity
             android:name="com.example.myapplication.activity.LockActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_lock"
-            android:theme="@style/FullscreenTheme" >
+            android:label="@string/title_activity_lock" >
         </activity>
         <!-- image picker -->
         <activity
@@ -81,7 +83,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.myapplication.activity.NoteShowActivity" />
     </application>
 
 </manifest>

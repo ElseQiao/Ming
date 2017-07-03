@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/a123"
+    android:background="@color/color_bg"
     tools:context="com.example.myapplication.activity.LockActivity">
+
 
     <com.andrognito.patternlockview.PatternLockView
         android:id="@+id/pattern_lock_view"
@@ -22,24 +23,33 @@
     app:wrongStateColor="@color/pomegranate"
     app:dotAnimationDuration="200"
     app:pathEndAnimationDuration="100"
-        tools:layout_editor_absoluteY="143dp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="8dp"
-        app:layout_constraintHorizontal_bias="0.0" />
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/lock_texttip" />
 
     <TextView
         android:id="@+id/lock_texttip"
-        android:layout_width="344dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:gravity="center"
         android:text="TextView"
-        tools:layout_editor_absoluteX="8dp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/pattern_lock_view" />
+        android:textColor="@color/color_bg"
+        android:textSize="@dimen/bartext_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="52dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
 
     <Button
         android:id="@+id/lock_button_clean"
@@ -48,8 +58,21 @@
         android:text="清除手势"
         android:textColor="@color/color_bg"
         android:background="@drawable/basecolor_bt"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="501dp" />
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/pattern_lock_view"
+        app:layout_constraintVertical_bias="0.666"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="16dp"
+        android:visibility="gone"
+        app:layout_constraintHorizontal_bias="0.491" />
+
+
 
 
 </android.support.constraint.ConstraintLayout>

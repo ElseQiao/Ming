@@ -101,7 +101,7 @@
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
-    <color name="bgColorPrimaryDark">#66ffffff</color>
+    <color name="bgColorPrimaryDark">#635959</color>
     <color name="black_overlay">#66000000</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
@@ -115,15 +115,15 @@
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
-    <color name="color1">#ecbcbc</color>
-    <color name="color2">#D1C4AB</color>
-    <color name="color3">#D1C4AB</color>
-    <color name="color4">#1A99AD</color>
-    <color name="color5">#df7465</color>
-    <color name="colorAccent">#009688</color>
-    <color name="colorPrimary">#39426b</color>
-    <color name="colorPrimaryDark">#343d69</color>
-    <color name="color_bg">#f7f7f9</color>
+    <color name="color1">#e9edef</color>
+    <color name="color2">#e4fcf4</color>
+    <color name="color3">#e7e9ff</color>
+    <color name="color4">#b2d1ff</color>
+    <color name="color5">#FFFDE7</color>
+    <color name="colorAccent">#635959</color>
+    <color name="colorPrimary">#635959</color>
+    <color name="colorPrimaryDark">#494343</color>
+    <color name="color_bg">#F9F9F7</color>
     <color name="crop__button_bar">#f3f3f3</color>
     <color name="crop__button_text">#666666</color>
     <color name="crop__selector_focused">#77000000</color>
@@ -162,7 +162,7 @@
     <color name="material_grey_900">#ff212121</color>
     <color name="nnf_dark_separator_color">#1effffff</color>
     <color name="nnf_light_separator_color">#1e000000</color>
-    <color name="note_color1">#eae6a5</color>
+    <color name="note_color1">#FF847C</color>
     <color name="note_color2">#ebc2c0</color>
     <color name="note_color3">#ffc456</color>
     <color name="note_color4">#a6d6e0</color>
@@ -742,6 +742,7 @@
     <string name="menu_about">关于</string>
     <string name="menu_export">一键导出</string>
     <string name="menu_lock">密码设置</string>
+    <string name="menu_lockset">手势设置</string>
     <string name="message_pattern_cleared">Pattern cleared</string>
     <string name="message_pattern_detected">Pattern drawing completed</string>
     <string name="message_pattern_dot_added">Dot added to pattern</string>
@@ -773,13 +774,13 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
-        
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        
+        <!--@color/colorPrimaryDark-->
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle
-        </item> 
+        <item name="actionOverflowMenuStyle">@style/OverMenuStyle</item> <!--新增一个item，用于控制menu-->
+
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -1858,64 +1859,62 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="FilePickerTheme" parent="NNF_BaseTheme.Light">
-        
+        <!-- Set these to match your theme -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
-        
+        <!-- Setting a divider is entirely optional -->
         <item name="nnf_list_item_divider">?android:attr/listDivider</item>
 
-        
+        <!-- Need to set this also to style create folder dialog -->
         <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
 
-        
-        
-    </style>
-    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/black_overlay</item>
-    </style>
-    <style name="FullscreenTheme" parent="AppTheme">
-        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
-        <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:windowBackground">@null</item>
-        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
-        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+        <!-- If you want to set a specific toolbar theme, do it here -->
+        <!-- <item name="nnf_toolbarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item> -->
     </style>
     <style name="NNF_BaseTheme" parent="Theme.AppCompat.DialogWhenLarge">
-        
+        <!-- You can override this in your sub theme -->
         <item name="nnf_toolbarTheme">@style/ThemeOverlay.AppCompat.ActionBar</item>
         <item name="nnf_separator_color">@color/nnf_dark_separator_color</item>
         <item name="nnf_save_icon_color">?attr/colorAccent</item>
         <item name="nnf_dir_icon_color">?attr/colorAccent</item>
 
-        
+        <!-- These are important. Handled by toolbar. -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
     <style name="NNF_BaseTheme.Light" parent="Theme.AppCompat.Light.DialogWhenLarge">
-        
+        <!-- You can override this in your sub theme -->
         <item name="nnf_toolbarTheme">@style/ThemeOverlay.AppCompat.ActionBar</item>
         <item name="nnf_separator_color">@color/nnf_light_separator_color</item>
         <item name="nnf_save_icon_color">?attr/colorAccent</item>
         <item name="nnf_dir_icon_color">?attr/colorAccent</item>
 
-        
+        <!-- These are important. Handled by toolbar. -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="OverMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+    <!-- 弹出层背景颜色 -->
+    <item name="android:popupBackground">@mipmap/pop</item>
+    </style>
+    <style name="OverflowButtonStyle" parent="@android:style/Widget.ActionButton.Overflow">
+        <item name="android:src">@mipmap/menu</item>
+    </style>
     <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
-        
+        <!-- 是否覆盖锚点，默认为true，即盖住Toolbar -->
         <item name="overlapAnchor">false</item>
-        
-        <item name="android:popupBackground">@color/colorPrimary</item>
-        
+        <!-- 弹出层垂直方向上的偏移，即在竖直方向上距离Toolbar的距离，值为负则会盖住Toolbar -->
         <item name="android:dropDownVerticalOffset">5dp</item>
-        
-        <item name="android:dropDownHorizontalOffset">0dp</item>
-
-        
-        
+        <!-- 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 -->
+        <item name="android:dropDownHorizontalOffset">1dp</item>
+        <!-- 溢出菜单图标颜色-->
+        <item name="colorControlNormal">@android:color/white</item>
+        <!--修改toolbar菜单按钮的style-->
+         <item name="android:actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
+        <!--&lt;!&ndash; 溢出菜单文字颜色&ndash;&gt;-->
+        <item name="textAppearanceLargePopupMenu">@style/ToolbarMenuTheme</item>
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -2240,8 +2239,9 @@
     <style name="ThemeOverlay.AppCompat.Dialog.Alert" parent="Base.ThemeOverlay.AppCompat.Dialog.Alert"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
     <style name="ToolbarMenuTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
-        <item name="actionMenuTextColor">@color/color_bg</item> 
-        
+        <item name="actionMenuTextColor">@color/color_bg</item> <!--  敲定颜色-->
+        <item name="android:textSize">16sp</item>   <!--搞掂字体大小-->
+        <item name="android:textColor">@color/color_bg</item>
     </style>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>

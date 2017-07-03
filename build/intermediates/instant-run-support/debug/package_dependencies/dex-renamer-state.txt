@@ -1,4 +1,4 @@
-#Wed May 10 14:20:55 CST 2017
+#Wed May 24 17:33:54 CST 2017
 file.2=E\:\\Users\\User\\studio1\\ming\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_b81b98647d95c66361409bc64d70eeb330c489a4\\classes.dex
 base.2=E\:\\Users\\User\\studio1\\ming\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_b81b98647d95c66361409bc64d70eeb330c489a4
 file.1=E\:\\Users\\User\\studio1\\ming\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_012dfa2ff92c106fdeb71101edb2669a1bd1ebb4\\classes.dex

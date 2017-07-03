@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/color_bg"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    >
+    <!--android:background="@mipmap/bg8"-->
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-    >
 
+        >
+        <!--android:background="#33ffffff"-->
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways"
-            android:background="?attr/colorPrimary"
-            android:theme="@style/ToolbarMenuTheme"
-            />
-
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:background="@mipmap/toolbar8"
+            app:theme="@style/OverflowMenuStyle"
+            app:popupTheme="@style/OverflowMenuStyle"
+            >
+            </android.support.v7.widget.Toolbar>
+        <!--?attr/actionBarSize-->
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -56,7 +60,7 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
         android:clickable="true"
-        android:src="@color/color1"
+        android:src="@mipmap/m5"
         app:backgroundTint="@color/colorPrimary" />
 
 

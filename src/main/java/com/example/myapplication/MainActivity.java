@@ -39,6 +39,7 @@ import com.example.myapplication.utils.ImportUtil;
 
 import org.litepal.crud.DataSupport;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     private DirsAdapter adapter;
     private int limit=12;
     private int offset=0;
+    private ExportUtil exportUtil;
    // private ExecutorService singleExecutor;
 
     @Override
@@ -91,6 +93,9 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onItemLongClick(View view, int position) {
+                if(position>=dirs.size()){
+                    return;
+                }
                 showCustomDialog(position);
             }
         }));
@@ -106,19 +111,19 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle("文件分类");
         toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.color_bg));
         setSupportActionBar(toolbar);
-        toolbar.setNavigationIcon(R.drawable.ic_main);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TipShow("nothing");
-            }
-        });
+//        toolbar.setNavigationIcon(R.drawable.ic_main);
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                TipShow("nothing");
+//            }
+//        });
 
         fb = (FloatingActionButton) findViewById(R.id.floatingActionButton);
         fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDirsDialog();
+                showDirsDialog(false,-1);
             }
         });
 
@@ -127,7 +132,15 @@ public class MainActivity extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.action_export:
-                        new ExportUtil().oneKeyExport();
+                        if(exportUtil==null){
+                            exportUtil=new ExportUtil();
+                        }
+                        exportUtil.oneKeyExport(new ExportUtil.ExportListen() {
+                            @Override
+                            public void resultOfExport(String result) {
+                                TipShow(result);
+                            }
+                        });
                         break;
                     case R.id.action_import:
                         onDirPicker();
@@ -185,13 +198,31 @@ public class MainActivity extends AppCompatActivity {
     private void TipShow(String tip) {
         Snackbar.make(fb, tip, Snackbar.LENGTH_SHORT).show();
     }
-    private void showDirsDialog() {
+    private void showDirsDialog(final boolean isEdit,final int editPostion) {
         DirsDialog d = new DirsDialog();
+        Bundle bundle=new Bundle();
+        if(isEdit&&editPostion<dirs.size()){
+            bundle.putString("title",dirs.get(editPostion).getTitle());
+            bundle.putString("name",dirs.get(editPostion).getIntroduce());
+        }else{
+            bundle.putString("title","");
+            bundle.putString("name","");
+        }
+        d.setArguments(bundle);
         d.show(getFragmentManager(), "dirs");
         d.setOnDirsDialogBtClick(new DirsDialog.OnDirsDialogBtClick() {
             @Override
             public void setDirs(String title, String text) {
-                createDirs(title, text);
+                if(isEdit){
+                    DirsModle modle=dirs.get(editPostion);
+                    modle.setTitle(title);
+                    modle.setIntroduce(text);
+                    modle.update(modle.getId());
+                    //实时更新
+                    adapter.notifyItemChanged(editPostion);
+                }else{
+                    createDirs(title, text);
+                }
             }
         });
     }
@@ -307,6 +338,7 @@ public class MainActivity extends AppCompatActivity {
         View v = inflater.inflate(R.layout.dialog_dirs_list, (ViewGroup) findViewById(R.id.dialog_notelist));
         TextView tv_delete= (TextView) v.findViewById(R.id.dialog_dirlist_tv1);
         TextView tv_edit= (TextView) v.findViewById(R.id.dialog_dirlist_tv2);
+        TextView tv_save= (TextView) v.findViewById(R.id.dialog_dirlist_tv3);
 
         android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(this);
         builder.setView(v);
@@ -328,6 +360,25 @@ public class MainActivity extends AppCompatActivity {
         tv_edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showDirsDialog(true,position);
+                dialog.dismiss();
+            }
+        });
+        tv_save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(exportUtil==null){
+                    exportUtil=new ExportUtil();
+                }
+                DirsModle dirsModle = dirs.get(position);
+                List<DirsModle> l=new ArrayList<DirsModle>();
+                l.add(dirsModle);
+                exportUtil.exportDir(l, new ExportUtil.ExportListen() {
+                    @Override
+                    public void resultOfExport(String result) {
+                        TipShow(result);
+                    }
+                });
                 dialog.dismiss();
             }
         });
@@ -356,5 +407,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
       //  recyclerView.removeOnItemTouchListener();
+        if(exportUtil!=null){
+            exportUtil.stopExport();
+        }
     }
 }

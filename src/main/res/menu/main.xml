@@ -12,7 +12,7 @@
     <item
         android:id="@+id/action_lock"
         NotepadApp:showAsAction="never"
-        android:title="@string/menu_about" />
+        android:title="@string/menu_lockset" />
 
     <item
         android:id="@+id/action_about"

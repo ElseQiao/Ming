@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -48,6 +49,7 @@ public class LockActivity extends AppCompatActivity {
         tv_tip=(TextView)findViewById(R.id.lock_texttip);
         bt_clean=(Button)findViewById(R.id.lock_button_clean);
         mPatternLockView.addPatternLockListener(mPatternLockViewListener);
+        initLockType();
     }
 
     private void initLockType(){
@@ -88,7 +90,8 @@ public class LockActivity extends AppCompatActivity {
             case CHANGE_LOCK:
                 if(sp.getString(lockName,"").equals(patternString)){
                     modle=CREATE_LOCK;
-                    tv_tip.setText("输入你的手势！");
+                    tv_tip.setText("输入新的手势！");
+                    bt_clean.setVisibility(View.VISIBLE);
                 }else {
                     TipShow("保存手势不同");
                 }

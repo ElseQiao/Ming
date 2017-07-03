@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/color_bg"
-            android:textSize="@dimen/bartext_size"
+            android:textSize="@dimen/title_size"
             android:ellipsize="start"
             android:maxLines="1"
            />

@@ -3,6 +3,7 @@ package com.example.myapplication.activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
@@ -14,6 +15,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -22,8 +25,12 @@ import android.widget.TextView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.adapter.TextAdapter;
+import com.example.myapplication.filepicker.FilePickerActivity;
+import com.example.myapplication.filepicker.Utils;
 import com.example.myapplication.model.NotesModle;
 import com.example.myapplication.model.RecyclerItemClickListener;
+import com.example.myapplication.utils.ExportUtil;
+import com.example.myapplication.utils.ImportUtil;
 import com.example.myapplication.utils.SdCardUtils;
 import com.soundcloud.android.crop.Crop;
 
@@ -68,11 +75,17 @@ public class NotesListActivity extends AppCompatActivity {
         recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
+                if(position>=notes.size()){
+                    return;
+                }
                 goEditActivity(notes.get(position).getId(), position, true);
             }
 
             @Override
             public void onItemLongClick(View view, int position) {
+                if(position>=notes.size()){
+                    return;
+                }
                 showCustomDialog(position);
             }
         }));
@@ -90,6 +103,16 @@ public class NotesListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+            }
+        });
+
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if(item.getItemId()==R.id.action_importnote){
+                    onNotePicker();
+                }
+                return false;
             }
         });
 
@@ -155,6 +178,21 @@ public class NotesListActivity extends AppCompatActivity {
         startActivityForResult(i, noteList_requestCode);
     }
 
+
+    private static final int FILE_CODE =2000;
+    private void onNotePicker() {
+        // This always works
+        Intent i = new Intent(this, FilePickerActivity.class);
+
+        // Set these depending on your use case. These are the defaults.
+        i.putExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE, true);
+        i.putExtra(FilePickerActivity.EXTRA_ALLOW_CREATE_DIR, false);
+        i.putExtra(FilePickerActivity.EXTRA_MODE, FilePickerActivity.MODE_FILE);
+        i.putExtra(FilePickerActivity.EXTRA_START_PATH, Environment.getExternalStorageDirectory().getPath());
+        startActivityForResult(i, FILE_CODE);
+    }
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -183,12 +221,32 @@ public class NotesListActivity extends AppCompatActivity {
                     handleCrop(resultCode, data);
                 }
             break;
+            case FILE_CODE:
+                if ( resultCode == RESULT_OK) {
+                List<Uri> uris = Utils.getSelectedFilesFromResult(data);
+                ImportUtil.saveNotes(uris,parent_id);
+                refreshList();
+                }
+                break;
             default:
                 break;
         }
     }
 
+    private void refreshList() {
+        offset=0;
+        List<NotesModle> newNotes=DataSupport.where("parent_id like ?", "" + parent_id).order("id desc")
+                .limit(limit).offset(offset).find(NotesModle.class);
+        if (newNotes == null || newNotes.size() == 0) {
+            return;
+        }
 
+        notes.clear();
+        notes.addAll(newNotes);
+        offset=offset+notes.size();
+
+        adapter.notifyDataSetChanged();
+    }
 
 
     private void TipShow(String tip) {
@@ -250,6 +308,8 @@ public class NotesListActivity extends AppCompatActivity {
         View v = inflater.inflate(R.layout.dialog_note_list, (ViewGroup) findViewById(R.id.dialog_notelist));
         TextView tv_delete= (TextView) v.findViewById(R.id.dialog_notelist_tv1);
         TextView tv_img= (TextView) v.findViewById(R.id.dialog_notelist_tv2);
+        TextView tv_save= (TextView) v.findViewById(R.id.dialog_notelist_tv3);
+
 
         android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(this);
         builder.setView(v);
@@ -271,6 +331,17 @@ public class NotesListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 pickImage(position);
+                dialog.dismiss();
+            }
+        });
+
+        tv_save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NotesModle nm=notes.get(position);
+                if(nm!=null){
+                    TipShow(ExportUtil.exportNote(nm));
+                }
                 dialog.dismiss();
             }
         });
@@ -322,5 +393,11 @@ public class NotesListActivity extends AppCompatActivity {
         //p.alpha = 0.5f;
         dialogWindow.setAttributes(p);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.notelist_menu,menu);
+        return true;
     }
 }

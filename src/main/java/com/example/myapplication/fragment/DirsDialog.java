@@ -30,6 +30,16 @@ public class DirsDialog extends DialogFragment implements View.OnClickListener {
     private Button dirdialogCreate;
     private Button dirdialogCancel;
 
+    private String title;
+    private String introduce;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        title=getArguments().getString("title");
+        introduce=getArguments().getString("name");
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -46,6 +56,10 @@ public class DirsDialog extends DialogFragment implements View.OnClickListener {
         dirdialogEditTextText= (EditText) v.findViewById(R.id.dirdialog_editText_text);
         dirdialogCreate.setOnClickListener(this);
         dirdialogCancel.setOnClickListener(this);
+        if(!"".equals(introduce)||!"".equals(title)){
+            dirdialogEditTextTitle.setText(title);
+            dirdialogEditTextText.setText(introduce);
+        }
     }
 
     @Override

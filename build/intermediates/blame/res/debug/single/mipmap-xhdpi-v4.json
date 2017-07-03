@@ -1,34 +1,118 @@
 [
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\a128.jpeg",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\a128.jpeg"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\xianxia.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\xianxia.jpg"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\a123.jpeg",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\a123.jpeg"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\toolbarbg.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\toolbarbg.jpg"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\a124.jpeg",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\a124.jpeg"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\toolbar2.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\toolbar2.jpg"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\a126.jpg",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\a126.jpg"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\bg7.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\bg7.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\lock4.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\lock4.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\bgmap.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\bgmap.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\toolbar4.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\toolbar4.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\toolbarshui.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\toolbarshui.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\splsh.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\splsh.jpg"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\barbg.jpg",
         "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\barbg.jpg"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\a125.jpeg",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\a125.jpeg"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\pop.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\pop.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\bg9.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\bg9.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\toolbar3.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\toolbar3.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\splsh2.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\splsh2.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\xianxia3.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\xianxia3.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\lock3.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\lock3.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\bg5.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\bg5.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\a128.jpeg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\a128.jpeg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\bg8.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\bg8.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\lock.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\lock.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\toolbar6.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\toolbar6.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\toolbar1.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\toolbar1.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\bg4.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\bg4.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\lock2.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\lock2.jpg"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\bg1.jpg",
         "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\bg1.jpg"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\a127.jpeg",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\a127.jpeg"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\bgmain.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\bgmain.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\background.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\background.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\toolbar8.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\toolbar8.jpg"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\toolbar5.jpg",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\mipmap-xhdpi\\toolbar5.jpg"
     }
 ]

@@ -35,6 +35,22 @@
         android:background="@drawable/text_item_bg"
         android:text="插入背景" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="#9f9b9b"
+        />
 
+    <TextView
+        android:id="@+id/dialog_notelist_tv3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_height"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_all2"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/dialog_text"
+        android:typeface="normal"
+        android:background="@drawable/text_item_bg"
+        android:text="导出本地" />
 
 </LinearLayout>

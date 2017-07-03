@@ -39,6 +39,7 @@
         android:ellipsize="end"
         android:gravity="center_vertical"
         android:maxLines="1"
+        android:textSize="16sp"
         android:padding="8dp"
         android:singleLine="true"
         android:text="@string/nnf_name" />

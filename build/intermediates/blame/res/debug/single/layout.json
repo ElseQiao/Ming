@@ -36,20 +36,28 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\layout\\abc_action_mode_bar.xml"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_dirs.xml",
         "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\dialog_dirs.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\nnf_dialog_folder_name.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\nnf_dialog_folder_name.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\dirslist.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\dirslist.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_note_list.xml",
@@ -58,14 +66,6 @@
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
-    },
-    {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\dirslist.xml",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\dirslist.xml"
-    },
-    {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\nnf_dialog_folder_name.xml",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\nnf_dialog_folder_name.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
@@ -104,12 +104,12 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\layout\\notification_template_icon_group.xml"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
-    },
-    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\activity_lock.xml",
         "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\activity_lock.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
@@ -156,12 +156,12 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\cdd74c09f1bc06e15546d84bed4308bf84aaac7a\\output\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\activity_note.xml",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\activity_note.xml"
-    },
-    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\activity_note.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\activity_note.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\activity_note_show.xml",
@@ -268,12 +268,12 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\noteslist.xml",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\noteslist.xml"
-    },
-    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\crop__activity_crop.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\aa7a597ae9cbebab37205c1c6e811223946b58fa\\output\\res\\layout\\crop__activity_crop.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\noteslist.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\layout\\noteslist.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",

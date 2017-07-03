@@ -2,8 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/a124"
+    android:background="@mipmap/bgmain"
+    android:fitsSystemWindows="true"
     tools:context="com.example.myapplication.activity.SplashActivity">
+
 
 
 </FrameLayout>
