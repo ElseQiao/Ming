@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_font_size"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_all"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_height"
+        android:textSize="@dimen/bartext_size"
+        android:gravity="center_vertical"
+        android:text="选择文本字体大小" />
+    <TextView
+        android:id="@+id/dialog_font_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_height"
+        android:gravity="center"
+        android:text="望美人兮天一方" />
+
+    <SeekBar
+        android:id="@+id/dialog_font_seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="3" />
+
+
+
+    <LinearLayout
+        android:layout_marginTop="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/dialog_font_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:layout_weight="1"
+            android:textColor="@color/dialog_text"
+            android:typeface="normal"
+            android:text="取消" />
+
+        <Button
+            android:id="@+id/dialog_font_sure"
+            android:layout_marginLeft="@dimen/dialog_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:layout_weight="1"
+            android:textColor="@color/dialog_text"
+            android:typeface="normal"
+            android:text="确定" />
+    </LinearLayout>
+
+</LinearLayout>

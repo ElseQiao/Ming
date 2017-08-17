@@ -1,5 +1,9 @@
 [
     {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\hue_list.png",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\drawable-xhdpi\\hue_list.png"
+    },
+    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\crop__tile.png",
         "source": "C:\\Users\\User\\.android\\build-cache\\aa7a597ae9cbebab37205c1c6e811223946b58fa\\output\\res\\drawable-xhdpi\\crop__tile.png"
     },
@@ -20,11 +24,15 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\aa7a597ae9cbebab37205c1c6e811223946b58fa\\output\\res\\drawable-xhdpi\\crop__divider.9.png"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\crop__ic_done.png",
-        "source": "C:\\Users\\User\\.android\\build-cache\\aa7a597ae9cbebab37205c1c6e811223946b58fa\\output\\res\\drawable-xhdpi\\crop__ic_done.png"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\alpha_bottom.png",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\drawable-xhdpi\\alpha_bottom.png"
     },
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_arrow_back_white_24dp.png",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\drawable-xhdpi\\ic_arrow_back_white_24dp.png"
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_arrow_back_white_24dp_1.png",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\drawable-xhdpi\\ic_arrow_back_white_24dp_1.png"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\crop__ic_done.png",
+        "source": "C:\\Users\\User\\.android\\build-cache\\aa7a597ae9cbebab37205c1c6e811223946b58fa\\output\\res\\drawable-xhdpi\\crop__ic_done.png"
     }
 ]

@@ -1,9 +1,5 @@
 [
     {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_arrow_back_white_24dp.png",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\drawable-hdpi\\ic_arrow_back_white_24dp.png"
-    },
-    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\crop__divider.9.png",
         "source": "C:\\Users\\User\\.android\\build-cache\\aa7a597ae9cbebab37205c1c6e811223946b58fa\\output\\res\\drawable-hdpi\\crop__divider.9.png"
     },
@@ -14,9 +10,5 @@
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\crop__ic_done.png",
         "source": "C:\\Users\\User\\.android\\build-cache\\aa7a597ae9cbebab37205c1c6e811223946b58fa\\output\\res\\drawable-hdpi\\crop__ic_done.png"
-    },
-    {
-        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_save_white_24dp.png",
-        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\drawable-hdpi\\ic_save_white_24dp.png"
     }
 ]

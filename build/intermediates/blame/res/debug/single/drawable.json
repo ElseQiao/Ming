@@ -32,6 +32,10 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
     {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\img_plate_cursor.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\drawable\\img_plate_cursor.xml"
+    },
+    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\drawable\\abc_edit_text_material.xml"
     },
@@ -44,12 +48,24 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\drawable\\notification_icon_background.xml"
     },
     {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_arrow_back_white_24dp.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\drawable\\ic_arrow_back_white_24dp.xml"
+    },
+    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\ripple_edit_bg.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\drawable\\ripple_edit_bg.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\alpha_bottom_drawable.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\drawable\\alpha_bottom_drawable.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
@@ -88,6 +104,10 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\color_arrow.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\drawable\\color_arrow.xml"
+    },
+    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\crop__selectable_background.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\aa7a597ae9cbebab37205c1c6e811223946b58fa\\output\\res\\drawable\\crop__selectable_background.xml"
     },
@@ -124,6 +144,10 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\cursor.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\drawable\\cursor.xml"
+    },
+    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\drawable\\abc_dialog_material_background.xml"
     },
@@ -154,6 +178,10 @@
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\b6627293f718a624909f280c39a0509d4746db46\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\ripple_font.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\drawable\\ripple_font.xml"
     },
     {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",

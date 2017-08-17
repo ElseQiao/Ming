@@ -21,8 +21,8 @@ import java.util.List;
 public class DirsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private List<DirsModle> dirs=new ArrayList<>();
-    private int[] cardColors={R.color.color1,R.color.color2,R.color.color3,R.color.color4,R.color.color5,
-            R.color.color1,R.color.color2,R.color.color2,R.color.color4,R.color.color5};
+    private int[] cardColors={R.color.color1,R.color.color2,R.color.color3,R.color.color4,R.color.color6,
+            R.color.color1,R.color.color2,R.color.color2,R.color.color4,R.color.color6};
     private final int  NORMAL_TYPE=0;
     private final int FOOT_TYPE=1;
     private LayoutInflater layoutInflater;

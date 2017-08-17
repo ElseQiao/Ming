@@ -353,7 +353,8 @@ public class MainActivity extends AppCompatActivity {
                 DataSupport.deleteAllAsync(NotesModle.class, "parent_id = ?", parentId + "");
                 DataSupport.delete(DirsModle.class, parentId);
                 dirs.remove(position);
-                adapter.notifyItemRemoved(position);
+               // adapter.notifyItemRemoved(position);//直接使用这个不会onViewAttachedToWindow更新最后一行
+                adapter.notifyDataSetChanged();
                 dialog.dismiss();
             }
         });

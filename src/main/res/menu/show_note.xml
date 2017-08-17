@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:NotepadApp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.EditNoteActivity"
+    >
+
+    <item
+        android:id="@+id/action_face"
+        NotepadApp:showAsAction="ifRoom"
+        android:icon="@drawable/ripple_font"
+        android:title="字体"/>
+    <item
+        android:id="@+id/action_bg"
+        NotepadApp:showAsAction="ifRoom"
+        android:icon="@drawable/ripple_edit_bg"
+        android:title="背景"/>
+</menu>

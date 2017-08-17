@@ -9,20 +9,31 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="@dimen/normal_height"
-        android:background="@color/colorPrimary"
+        android:background="@mipmap/toolbar8"
         android:gravity="center"
         android:text="@string/dialog_dir_title"
+        android:textColor="@color/color_bg"
         android:textSize="@dimen/bartext_size" />
 
     <EditText
         android:id="@+id/dirdialog_editText_title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/normal_height"
-        android:layout_margin="@dimen/margin_all"
+        android:layout_marginTop="@dimen/margin_all"
+        android:layout_marginLeft="@dimen/margin_all"
+        android:layout_marginRight="@dimen/margin_all"
         android:maxLength="6"
-        android:gravity="start"
-        android:hint="@string/dirdialog_hintTitle"
-        android:textSize="@dimen/bartext_size" />
+        android:gravity="start|center_vertical"
+        android:hint="标题（6个字以内）"
+        android:background="@null"
+        android:textSize="@dimen/title_size" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/margin_all"
+        android:layout_marginRight="@dimen/margin_all"
+        android:background="@color/colorPrimary"
+       />
 
     <EditText
         android:id="@+id/dirdialog_editText_text"
@@ -30,9 +41,10 @@
         android:layout_height="@dimen/normal_height"
         android:layout_marginLeft="@dimen/margin_all"
         android:layout_marginRight="@dimen/margin_all"
-        android:gravity="start"
+        android:gravity="start|center_vertical"
+        android:background="@null"
         android:hint="@string/dirdialog_hintText"
-        android:textSize="@dimen/bartext_size" />
+        android:textSize="@dimen/title_size" />
 
 
     <LinearLayout
@@ -47,6 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/normal_height"
             android:layout_weight="1"
+            android:textSize="@dimen/title_size"
             android:background="@drawable/basecolor_bt"
             android:text="@string/dirdialog_ensure" />
 
@@ -60,6 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/normal_height"
             android:layout_weight="1"
+            android:textSize="@dimen/title_size"
             android:background="@drawable/basecolor_bt"
             android:text="@string/dirdialog_cancel" />
 

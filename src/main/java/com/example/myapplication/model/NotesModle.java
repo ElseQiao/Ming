@@ -8,9 +8,9 @@ import org.litepal.crud.DataSupport;
  */
 
 public class NotesModle extends DataSupport {
-    @Column(defaultValue = "empty")
+    @Column(defaultValue = "无名")
     private String title;
-    @Column(defaultValue = "nothing")
+    @Column(defaultValue = "书写新篇章。。。")
     private String content;
     @Column(defaultValue = "1")
     private int color;

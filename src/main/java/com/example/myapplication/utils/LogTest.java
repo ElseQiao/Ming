@@ -9,6 +9,6 @@ import android.util.Log;
 public class LogTest {
     private static String TAG="test";
     public static void D(String s){
-        Log.d(TAG, "D: "+s);
+        Log.d(TAG, "Debug------: "+s);
     }
 }

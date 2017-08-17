@@ -3,9 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/note_CoordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color5"
+    android:background="@color/note_color3"
   >
 
     <android.support.design.widget.AppBarLayout
@@ -60,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:cardBackgroundColor="#66ffffff"
+            app:cardBackgroundColor="#33ffffff"
             app:cardElevation="8dp"
             app:contentPadding="16dp">
 
@@ -70,7 +71,7 @@
                 android:layout_height="@dimen/normal_height"
                 android:background="#33ffffff"
                 android:gravity="center_vertical"
-                android:maxLength="6"
+                android:maxLength="10"
                 android:padding="4dp"
                 android:text="asdlgkj"
                 android:textSize="18sp"
@@ -82,12 +83,13 @@
                 android:id="@+id/content_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:minHeight="240dp"
                 android:layout_marginTop="48.5dp"
                 android:gravity="start"
                 android:lineSpacingExtra="4dp"
                 android:padding="4dp"
                 android:scrollbars="vertical"
-                android:textSize="16sp"
+                android:textSize="@dimen/note_text_size"
                 android:typeface="serif" />
 
         </android.support.v7.widget.CardView>

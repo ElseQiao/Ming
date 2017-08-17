@@ -13,6 +13,8 @@ fatal: Could not read from remote repository.
 Please make sure you have the correct access rights
 and the repository exists.
 
+//签名密码 113
+
 //settext()  加载长文字耗时问题
 //cardview 背景设置，使用glide实现图片设置
 //使用DiffUtil替代notifyDataSetChanged进行加载更多
@@ -32,3 +34,7 @@ and the repository exists.
                 又没了，这是我们只要重写外层view的fitSystemWindows的方法，把padding值改为0即可（参见
                 SoftInputRelativeLayout）
 
+
+
+感谢：
+https://github.com/DingMouRen/ColorPicker.git  颜色选择

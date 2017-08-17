@@ -95,10 +95,11 @@ public class NotesListActivity extends AppCompatActivity {
         refresh.setColorSchemeResources(R.color.colorPrimary);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.toolbar_title_notes);
+        toolbar.setTitle("文章列表("+type+")");
         toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.color_bg));
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -156,8 +157,10 @@ public class NotesListActivity extends AppCompatActivity {
         if (newNotes.save()) {
             NotesModle findNote = DataSupport.findLast(NotesModle.class);
             notes.add(findNote);
-            adapter.notifyItemInserted(notes.size() - 1);
-            goEditActivity(findNote.getId(), notes.size() - 1, false);
+//            adapter.notifyItemInserted(notes.size() - 1);
+//            goEditActivity(findNote.getId(), notes.size() - 1, false);
+            adapter.notifyItemInserted(0);
+            goEditActivity(findNote.getId(), 0, false);
         } else {
             TipShow("creat fail");
         }
@@ -172,7 +175,7 @@ public class NotesListActivity extends AppCompatActivity {
         if(onlyRead){
             i = new Intent(NotesListActivity.this, NoteActivity.class);
         }else{
-            i = new Intent(NotesListActivity.this, NoteShowActivity.class);
+            i = new Intent(NotesListActivity.this, NoteEditActivity.class);
         }
         i.putExtra("id", note_id);
         startActivityForResult(i, noteList_requestCode);
@@ -304,19 +307,21 @@ public class NotesListActivity extends AppCompatActivity {
     private int positionForImage=-1;
     private void showCustomDialog(final int position) {
         positionForImage=position;
+        //1.我们想要的view样式
         LayoutInflater inflater = getLayoutInflater();
         View v = inflater.inflate(R.layout.dialog_note_list, (ViewGroup) findViewById(R.id.dialog_notelist));
         TextView tv_delete= (TextView) v.findViewById(R.id.dialog_notelist_tv1);
         TextView tv_img= (TextView) v.findViewById(R.id.dialog_notelist_tv2);
         TextView tv_save= (TextView) v.findViewById(R.id.dialog_notelist_tv3);
 
-
+        //2.创建dialog
         android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(this);
         builder.setView(v);
         final AlertDialog dialog = builder.create();
         dialog.show();
         setDialogAttributes(dialog);
 
+        //3.事件处理
         tv_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -361,8 +366,7 @@ public class NotesListActivity extends AppCompatActivity {
         }
         Uri destination = Uri.fromFile(new File(file,"img"+System.currentTimeMillis()));
         Crop.of(source, destination).asSquare().start(this);
-        Crop.of(source, destination).withAspect(9,16).withMaxSize(720,1280).start(this);
-
+       // Crop.of(source, destination).withAspect(9,16).withMaxSize(720,1280).start(this);
     }
    //
     private void handleCrop(int resultCode, Intent result) {

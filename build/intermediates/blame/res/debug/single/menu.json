@@ -8,6 +8,10 @@
         "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\menu\\notelist_menu.xml"
     },
     {
+        "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\menu\\show_note.xml",
+        "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\menu\\show_note.xml"
+    },
+    {
         "merged": "E:\\Users\\User\\studio1\\ming\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
         "source": "E:\\Users\\User\\studio1\\ming\\src\\main\\res\\menu\\main.xml"
     },

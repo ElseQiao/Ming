@@ -118,10 +118,12 @@
     <color name="color1">#e9edef</color>
     <color name="color2">#e4fcf4</color>
     <color name="color3">#e7e9ff</color>
-    <color name="color4">#b2d1ff</color>
+    <color name="color4">#FFF3E0</color>
     <color name="color5">#FFFDE7</color>
+    <color name="color6">#ace9f1</color>
     <color name="colorAccent">#635959</color>
     <color name="colorPrimary">#635959</color>
+    <color name="colorPrimary66">#66635959</color>
     <color name="colorPrimaryDark">#494343</color>
     <color name="color_bg">#F9F9F7</color>
     <color name="crop__button_bar">#f3f3f3</color>
@@ -163,7 +165,7 @@
     <color name="nnf_dark_separator_color">#1effffff</color>
     <color name="nnf_light_separator_color">#1e000000</color>
     <color name="note_color1">#FF847C</color>
-    <color name="note_color2">#ebc2c0</color>
+    <color name="note_color2">#dbe770</color>
     <color name="note_color3">#ffc456</color>
     <color name="note_color4">#a6d6e0</color>
     <color name="note_color5">#cef3d1</color>
@@ -580,6 +582,8 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="bartext_size">18sp</dimen>
     <dimen name="card_height">144dp</dimen>
     <dimen name="card_title_height">40dp</dimen>
@@ -635,12 +639,17 @@
     <item format="float" name="hint_alpha_material_light" type="dimen">0.38</item>
     <item format="float" name="hint_pressed_alpha_material_dark" type="dimen">0.70</item>
     <item format="float" name="hint_pressed_alpha_material_light" type="dimen">0.54</item>
+    <dimen name="hsv_height">240dp</dimen>
+    <dimen name="hsv_width">240dp</dimen>
+    <dimen name="hue_alpha_width">20dp</dimen>
+    <dimen name="hue_width">30dp</dimen>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
     <dimen name="margin_all">8dp</dimen>
     <dimen name="margin_all2">16dp</dimen>
     <dimen name="normal_height">48dp</dimen>
+    <dimen name="note_text_size">18sp</dimen>
     <dimen name="notification_action_icon_size">32dp</dimen>
     <dimen name="notification_action_text_size">13sp</dimen>
     <dimen name="notification_big_circle_margin">12dp</dimen>
@@ -659,7 +668,10 @@
     <dimen name="pattern_lock_dot_selected_size">24dp</dimen>
     <dimen name="pattern_lock_dot_size">10dp</dimen>
     <dimen name="pattern_lock_path_width">3dp</dimen>
+    <dimen name="show_height">30dp</dimen>
+    <dimen name="show_width">60dp</dimen>
     <dimen name="smallest_size">12sp</dimen>
+    <dimen name="space">10dp</dimen>
     <dimen name="text_size">14sp</dimen>
     <dimen name="title_size">16sp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
@@ -720,7 +732,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_save">保存</string>
-    <string name="app_name">My Application</string>
+    <string name="app_name">书情</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
@@ -730,15 +742,18 @@
     <string name="crop__saving">Saving picture…</string>
     <string name="crop__wait">Please wait…</string>
     <string name="dialog_dir_title">新添分类</string>
+    <string name="dialog_negative">取消</string>
+    <string name="dialog_positive">确定</string>
+    <string name="dialog_title">选择颜色</string>
     <string name="dirdialog_cancel">取消</string>
     <string name="dirdialog_ensure">确认</string>
     <string name="dirdialog_hintText">文件夹介绍</string>
-    <string name="dirdialog_hintTitle">标题（6个字以内）</string>
+    <string name="dirdialog_hintTitle">标题（10个字以内）</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="lib_name">PatternLockView</string>
     <string name="load_more">别扯了，没有了......</string>
-    <string name="main_title">Note</string>
+    <string name="main_title">章节</string>
     <string name="menu_about">关于</string>
     <string name="menu_export">一键导出</string>
     <string name="menu_lock">密码设置</string>
@@ -762,7 +777,7 @@
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_lock">LockActivity</string>
-    <string name="title_activity_splash">描述</string>
+    <string name="title_activity_splash">书情</string>
     <string name="toolba_title_note">编辑内容</string>
     <string name="toolbar_title_notes">文章列表</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
@@ -774,12 +789,12 @@
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <!-- Customize your theme here. -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <!--@color/colorPrimaryDark-->
+        
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="actionOverflowMenuStyle">@style/OverMenuStyle</item> <!--新增一个item，用于控制menu-->
+        <item name="actionOverflowMenuStyle">@style/OverMenuStyle</item> 
 
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
@@ -1859,61 +1874,61 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="FilePickerTheme" parent="NNF_BaseTheme.Light">
-        <!-- Set these to match your theme -->
+        
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
-        <!-- Setting a divider is entirely optional -->
+        
         <item name="nnf_list_item_divider">?android:attr/listDivider</item>
 
-        <!-- Need to set this also to style create folder dialog -->
+        
         <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
 
-        <!-- If you want to set a specific toolbar theme, do it here -->
-        <!-- <item name="nnf_toolbarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item> -->
+        
+        
     </style>
     <style name="NNF_BaseTheme" parent="Theme.AppCompat.DialogWhenLarge">
-        <!-- You can override this in your sub theme -->
+        
         <item name="nnf_toolbarTheme">@style/ThemeOverlay.AppCompat.ActionBar</item>
         <item name="nnf_separator_color">@color/nnf_dark_separator_color</item>
         <item name="nnf_save_icon_color">?attr/colorAccent</item>
         <item name="nnf_dir_icon_color">?attr/colorAccent</item>
 
-        <!-- These are important. Handled by toolbar. -->
+        
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
     <style name="NNF_BaseTheme.Light" parent="Theme.AppCompat.Light.DialogWhenLarge">
-        <!-- You can override this in your sub theme -->
+        
         <item name="nnf_toolbarTheme">@style/ThemeOverlay.AppCompat.ActionBar</item>
         <item name="nnf_separator_color">@color/nnf_light_separator_color</item>
         <item name="nnf_save_icon_color">?attr/colorAccent</item>
         <item name="nnf_dir_icon_color">?attr/colorAccent</item>
 
-        <!-- These are important. Handled by toolbar. -->
+        
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
     <style name="OverMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
-    <!-- 弹出层背景颜色 -->
+    
     <item name="android:popupBackground">@mipmap/pop</item>
     </style>
     <style name="OverflowButtonStyle" parent="@android:style/Widget.ActionButton.Overflow">
-        <item name="android:src">@mipmap/menu</item>
+        <item name="android:src">@drawable/ripple_menu</item>
     </style>
     <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
-        <!-- 是否覆盖锚点，默认为true，即盖住Toolbar -->
+        
         <item name="overlapAnchor">false</item>
-        <!-- 弹出层垂直方向上的偏移，即在竖直方向上距离Toolbar的距离，值为负则会盖住Toolbar -->
+        
         <item name="android:dropDownVerticalOffset">5dp</item>
-        <!-- 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 -->
+        
         <item name="android:dropDownHorizontalOffset">1dp</item>
-        <!-- 溢出菜单图标颜色-->
+        
         <item name="colorControlNormal">@android:color/white</item>
-        <!--修改toolbar菜单按钮的style-->
+        
          <item name="android:actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
-        <!--&lt;!&ndash; 溢出菜单文字颜色&ndash;&gt;-->
+        
         <item name="textAppearanceLargePopupMenu">@style/ToolbarMenuTheme</item>
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
@@ -2239,8 +2254,8 @@
     <style name="ThemeOverlay.AppCompat.Dialog.Alert" parent="Base.ThemeOverlay.AppCompat.Dialog.Alert"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
     <style name="ToolbarMenuTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
-        <item name="actionMenuTextColor">@color/color_bg</item> <!--  敲定颜色-->
-        <item name="android:textSize">16sp</item>   <!--搞掂字体大小-->
+        <item name="actionMenuTextColor">@color/color_bg</item> 
+        <item name="android:textSize">16sp</item>   
         <item name="android:textColor">@color/color_bg</item>
     </style>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
